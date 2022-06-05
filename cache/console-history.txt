@@ -1,0 +1,38 @@
+await Bid2.placeBid(1, advertiser1)
+const advertiser1 = await Bid2.advertisers[0]
+await Bid2.placeBid(1, advertisers[0])
+await Bid2.placeBid(1, Advertiser[0])
+await placeBid(1, Advertiser[0])
+await Bid2.register('0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266')
+console.log(accounts)
+const accounts = await ethers.provider.listAccounts();
+const Bid2 = await bid.attach('0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9', 0.1);
+const Bid = await bid.attach('0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9', 0.1);
+const Bid = await bid.attach('0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9');
+const bid = await ethers.getContractFactory('Bid');
+npx hardhat run --network localhost ./scripts/index.js
+console.log(accounts);
+const accounts = await ethers.provider.listAccounts();
+// Retrieve accounts from the local node
+(await box.retrieve()).toString()
+await box.store(42)
+const box = await Box.attach('0x5FbDB2315678afecb367f032d93F642f64180aa3')
+const Box = await ethers.getContractFactory('Box');
+npx hardhat run --network localhost ./scripts/index.js
+console.log('Box value is', value.toString());
+const value = await box.retrieve();
+// Call the retrieve() function of the deployed Box contract
+await box.store(23);
+// Send a transaction to store() a new value in the Box
+const box = await Box.attach(address);
+const Box = await ethers.getContractFactory('Box');
+const address = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+// Set up an ethers contract, representing our deployed Box instance
+console.log(accounts);
+const accounts = await ethers.provider.listAccounts();
+// Retrieve accounts from the local node
+(await box.retrieve()).toString()
+await box.retrieve()
+await box.store(42)
+const box = await Box.attach('0x5FbDB2315678afecb367f032d93F642f64180aa3')
+const Box = await ethers.getContractFactory('Box');
