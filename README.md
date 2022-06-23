@@ -3,7 +3,7 @@
 to pay more ETH than the last person in order to change the text and image link on the website. -->
 Version
 [X] 1: Initialize setup with contract
-[] 2: Register bidders (advertisers) (ensure budget + copy meets criteria)
+[X] 2: Register bidders (advertisers) (ensure budget + copy meets criteria)
 [] 3: Assign roles of admin to addresses for monitoring bidding
 [] 3: Add RTB function for ad with bidding
 [] 4: Add image/text functionality for ad copy
