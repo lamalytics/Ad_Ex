@@ -5,7 +5,7 @@ async function main() {
     // We get the contract to deploy
     const token = await ethers.getContractFactory('AEXToken');
     console.log('Deploying token...');
-    const Token = await token.deploy(ethers.utils.parseUnits("10000", "ether"));
+    const Token = await token.deploy("1000000");
     await Token.deployed();
     console.log('Token deployed to: ', Token.address);
 
@@ -17,7 +17,7 @@ async function main() {
 
     const bid = await ethers.getContractFactory('Bid');
     console.log('Deploying Bid...');
-    const Bid = await bid.deploy(100, Swap.address);
+    const Bid = await bid.deploy("100", Swap.address);
     await Bid.deployed();
     console.log('Bid deployed to:', Bid.address);
 }
