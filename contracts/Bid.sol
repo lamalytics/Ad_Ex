@@ -13,6 +13,14 @@ contract Bid is Ownable {
     Swap public swap;
     AEXToken public token;
     // fire when newAdvertiser is registered
+    // struct Advertiser {
+    //     address account;
+    //     uint256 advertiserId;
+    //     bool isRegistered;
+    //     bool isOwner;
+    // }
+
+    // Advertiser advertiser;
     event newAdvertiser(address addr);
 
     // fire when new ad is placed
@@ -36,11 +44,10 @@ contract Bid is Ownable {
         token = swap.token();
     }
     
-    
     // register advertiser for bidding (onlyOwner + admin[later])
     function register(address _address) public onlyOwner {
         require(token.balanceOf(_address) > 0, "please buy AEX tokens first");
-        require(_address != owner(), "The owner of this contract cannot register");
+        // require(_address != owner(), "The owner of this contract cannot register");
         require(isRegistered[_address] == false, "address is already registered");
         isRegistered[_address] = true;
         emit newAdvertiser(_address);
@@ -56,7 +63,6 @@ contract Bid is Ownable {
 
 
     function placeBid (uint256 _value) public {
-        // require(token.balanceOf(msg.sender) > 0, "please buy AEX tokens first");
         require(isRegistered[msg.sender] == true, "please register your address");
         require(token.balanceOf(msg.sender) >= _value, "you do not have enough tokens");
         // can be replaced with msg.value
@@ -78,12 +84,13 @@ contract Bid is Ownable {
         return curBid;
     }
 
-    function getToken() public view returns(address) {
-        return address(token);
-    }
-
-    function getSwap() public view returns(address) {
-        return address(swap);
+    function isRegisteredAddress(address _address) public view returns (bool) {
+        if(isRegistered[_address]) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 }
