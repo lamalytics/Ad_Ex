@@ -14,10 +14,12 @@ async function main() {
     const Swap = await swap.deploy(Token.address);
     await Swap.deployed();
     console.log('Swap deployed to: ', Swap.address);
+    await Token.mint(Swap.address, ethers.utils.parseEther("1000000000"));
+    console.log("Minted tokens to", Swap.address);
 
     const bid = await ethers.getContractFactory('Bid');
     console.log('Deploying Bid...');
-    const Bid = await bid.deploy("100", Swap.address);
+    const Bid = await bid.deploy(ethers.utils.parseEther("1"), Swap.address);
     await Bid.deployed();
     console.log('Bid deployed to:', Bid.address);
 }
