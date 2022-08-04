@@ -332,8 +332,8 @@
       ]
     },
     "/Users/BrianLam/Documents/GitHub/Ad_Ex/contracts/Bid.sol": {
-      "lastModificationDate": 1655696280173,
-      "contentHash": "f783facd67c4d388d9e4f15c7d4350c4",
+      "lastModificationDate": 1658692869928,
+      "contentHash": "e5bc080911b63e019aacac1fdda4f4d7",
       "sourceName": "contracts/Bid.sol",
       "solcConfig": {
         "version": "0.8.0",
